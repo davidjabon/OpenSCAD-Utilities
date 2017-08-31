@@ -7,13 +7,18 @@ There are two modules here.
 
 The first is roundedRectangle. Size is  a 2 by 1 vector as usual. You can specify a single radius. By setting the corner variables (ne, nw, se, sw) equal to 1 or 0, you can turn  on or off the rounding for that corner. The center variable works as usual.
 
-TODO:  radius could be turned into a 4 by 1 vector, so you could specifydifferent rounding radii at particular corners.
+TODO:  radius could be turned into a 4 by 1 vector, so you could specify  different rounding radii at particular corners.
 
 The second is roundedSquare, which is similar except that the rounding is controlled by a parameter ranging from 0 to 1.  1 is a complete circle in any quadrant that is rounded.
 
 Example usage
-Put this file in Documents/OpenSCAD/libraries
+Put this file in Documents/OpenSCAD/libraries and write at the top of the file:
 use <Rounded_rectangles_and_squares.scad>
+
+OR: Put this file in the same folder you are using and write at the top of the file:
+
+use <./Rounded_rectangles_and_squares.scad>
+
 
 roundedRectangle([20,30],radius=3,nw=0,sw=0,center=false);
 
@@ -23,10 +28,11 @@ roundedSquare(param=0.5, ne=0, side_length=20,center=false);
 
 
 
-// Example usage
+// Example usages
 //roundedSquare(param=0.5, ne=0,side_length=20,center=false);
 
 //roundedRectangle([20,30],radius=3,sw=0,sw=0);
+
 roundedRectangle([45,45], radius=3, sw=1,se=0,ne=0,nw=0, center=false);
 
 
