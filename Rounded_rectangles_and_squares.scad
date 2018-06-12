@@ -1,7 +1,9 @@
 $fn=100;
 
 /*
-One of the difficulties with OpenSCAD isputting rounded edges on shapes. One can use offsets, but it is somewhat difficult to getthe dimensions precise. This library is a rather crude attempt to make it a little easier to make rounded corners.
+One of the difficulties with OpenSCAD is putting rounded edges on shapes. One can use offsets, but it is somewhat difficult to get the dimensions precise.
+Sometimes one wants rounded edges on only one or two corners, and using an offset in that situation requires extra steps.
+This library is a rather crude attempt to make it a little easier to make rounded corners.
 
 There are two modules here. 
 
